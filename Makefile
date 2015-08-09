@@ -4,5 +4,10 @@ SRCLIST = $(wildcard src/*.cpp)
 
 EXEC = cards
 
+.PHONY: clean
+
 all:
-	g++ $(INCLUDES) $(SRCLIST) -std=c++11 -o $(EXEC)
+	clang++ -std=c++11 $(INCLUDES) $(SRCLIST) -o $(EXEC)
+
+clean:
+	rm $(EXEC)
